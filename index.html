@@ -9,29 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
-     .btn-primary {
-    transition: transform 1.2s ease, filter 1.2s ease;
-}
-
-.btn-primary:hover {
-    transform: scale(1.03);
-    filter: brightness(1.1);
-}
-/* Suaviza as transições dos cards de produto */
-.product-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Efeito ao passar o mouse ou tocar */
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-/* Animação para carregar o site suavemente */
+     /* Entrada do site mais suave e lenta (1.8 segundos) */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
@@ -42,94 +24,32 @@
 body {
     animation: fadeInUp 1.8s ease-out forwards;
 }
-  
-        :root {
-            --bg-dark: #0a0a0a;
-            --bg-card: #141414;
-            --gold: #d4af37;
-            --gold-light: #f3e5ab;
-            --gold-hover: #b89628;
-            --text-light: #f5f5f5;
-            --text-gray: #a0a0a0;
-            --border-gold: rgba(212, 175, 55, 0.3);
-        }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
-            scroll-behavior: smooth;
-        }
+/* Animação do brilho pulsando sozinho */
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 5px rgba(212, 175, 55, 0.2);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 18px rgba(212, 175, 55, 0.7);
+        transform: scale(1.01);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(212, 175, 55, 0.2);
+        transform: scale(1);
+    }
+}
 
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-            line-height: 1.6;
-        }
+/* Aplica o brilho contínuo nos cards e nos botões principais */
+.product-card {
+    animation: glowPulse 3s infinite ease-in-out;
+}
 
-        /* HEADER & NAVBAR */
-        header {
-            background-color: rgba(10, 10, 10, 0.95);
-            border-bottom: 1px solid var(--border-gold);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(5px);
-        }
+.btn-primary {
+    animation: glowPulse 2s infinite ease-in-out;
+}
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-        }
-
-        .logo {
-            font-family: 'Cinzel', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--gold);
-            text-decoration: none;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--gold);
-        }
-
-        .btn-nav {
-            background: linear-gradient(135deg, var(--gold), var(--gold-hover));
-            color: #000 !important;
-            padding: 0.6rem 1.2rem;
-            border-radius: 4px;
-            font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s !important;
-        }
-
-        .btn-nav:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
         }
 
         /* MENU MOBILE */
