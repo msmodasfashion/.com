@@ -60,6 +60,11 @@
             }
         }
 
+        /* EFEITO DE TRANSIÇÃO SUAVE PARA AS IMAGENS DO SLIDESHOW */
+        .slideshow-img {
+            transition: opacity 0.5s ease-in-out;
+        }
+
         /* HEADER & NAVBAR */
         header {
             background-color: rgba(10, 10, 10, 0.95);
@@ -517,9 +522,9 @@
         <h4 style="color: var(--gold); margin-bottom: 1rem; font-size: 1.2rem;">✨ Gangster Especial</h4>
         <div class="product-grid">
             
-            <!-- Camiseta Gangster Malha Suedine -->
+            <!-- Camiseta Gangster Malha Suedine COM CARROSSEL AUTOMÁTICO DE CORES -->
             <div class="product-card glow-effect" style="border: 1px solid var(--gold);">
-                <img src="gangster-suedine.jpg" alt="Camiseta Gangster Malha Suedine" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
+                <img id="gangster-suedine-img" class="slideshow-img" src="suedine-azul.jpg" alt="Camiseta Gangster Malha Suedine" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
                 <div class="product-info">
                     <div class="product-name" style="color: var(--gold);">Camiseta Gangster Malha Suedine</div>
                     <div class="price-container">
@@ -530,7 +535,7 @@
                         <p><strong>Tecido:</strong> Malha Suedine (Toque Macio e aveludado)</p>
                         <p><strong>Diferencial:</strong> Alta durabilidade, caimento perfeito e conforto premium</p>
                         <p><strong>Tamanhos:</strong> P, M, G, GG</p>
-                        <p><strong>Cores:</strong> Azul Marinho, Preto, Cinza</p>
+                        <p><strong>Cores:</strong> Azul Marinho, Preto, Cinza (muda automaticamente 🔄)</p>
                     </div>
                     <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Camiseta%20Gangster%20Malha%20Suedine." target="_blank" class="btn-primary">Tenho Interesse</a>
                 </div>
@@ -721,7 +726,30 @@
             navLinks.classList.toggle('active');
         }
 
-        // JS AUTOMÁTICO PARA APLICAR FADE-IN EM TUDO
+        // SCRIPT 1: SLIDESHOW AUTOMÁTICO DE CORES DO PRODUTO
+        const imagensGangster = [
+            "suedine-azul.jpg",
+            "suedine-preto.jpg",
+            "suedine-cinza.jpg"
+        ];
+        
+        let indiceImgAtual = 0;
+        const imgElemento = document.getElementById("gangster-suedine-img");
+
+        if (imgElemento) {
+            setInterval(() => {
+                // Efeito suave de opacidade
+                imgElemento.style.opacity = "0.3";
+                
+                setTimeout(() => {
+                    indiceImgAtual = (indiceImgAtual + 1) % imagensGangster.length;
+                    imgElemento.src = imagensGangster[indiceImgAtual];
+                    imgElemento.style.opacity = "1";
+                }, 300); // 300ms de transição
+            }, 3000); // Troca de foto a cada 3 segundos
+        }
+
+        // SCRIPT 2: ANIMAÇÃO FADE-IN NO SCROLL PARA TODAS AS SEÇÕES
         document.addEventListener("DOMContentLoaded", function () {
             const observerOptions = {
                 threshold: 0.15
@@ -735,7 +763,6 @@
                 });
             }, observerOptions);
 
-            // Seleciona todas as seções e cartões para aplicar o efeito de surgimento (fade-in)
             const elementsToAnimate = document.querySelectorAll("section, .product-card, .hours-card, .about-content, .contact-card");
             
             elementsToAnimate.forEach(el => {
