@@ -551,9 +551,9 @@
                 </div>
             </div>
 
-            <!-- Camisa Gangster Polo (Especial) -->
+            <!-- Camisa Gangster Polo COM CARROSSEL AUTOMÁTICO DE CORES -->
             <div class="product-card glow-effect" style="border: 1px solid var(--gold);">
-                <img src="polo-gangster.jpg" alt="Camisa Gangster Polo" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
+                <img id="polo-gangster-img" class="slideshow-img" src="polo-azul.jpg" alt="Camisa Gangster Polo" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
                 <div class="product-info">
                     <div class="product-name" style="color: var(--gold);">Camisa Gangster Polo</div>
                     <div class="price-container">
@@ -564,7 +564,7 @@
                         <p><strong>Estilo:</strong> Polo Clássica Gangster</p>
                         <p><strong>Acabamento:</strong> Gola estruturada e bordado exclusivo</p>
                         <p><strong>Tamanhos:</strong> P, M, G, GG</p>
-                        <p><strong>Cores:</strong> Azul Marinho, Preto, Cinza</p>
+                        <p><strong>Cores:</strong> Azul Marinho, Preto, Cinza (muda automaticamente 🔄)</p>
                     </div>
                     <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Camisa%20Gangster%20Polo." target="_blank" class="btn-primary">Tenho Interesse</a>
                 </div>
@@ -576,9 +576,9 @@
         <h4 style="color: var(--text-gray); margin-top: 2.5rem; margin-bottom: 1rem;">Camisetas Básicas e Casuais</h4>
         <div class="product-grid">
             
-            <!-- Camisa Gangster Básica -->
+            <!-- Camisa Gangster Básica COM CARROSSEL AUTOMÁTICO DE CORES -->
             <div class="product-card glow-effect">
-                <img src="basica-gangster.jpg" alt="Camisa Gangster Básica" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
+                <img id="basica-gangster-img" class="slideshow-img" src="basica-azul.jpg" alt="Camisa Gangster Básica" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
                 <div class="product-info">
                     <div class="product-name">Camisa Gangster Básica</div>
                     <div class="price-container">
@@ -588,7 +588,7 @@
                     <div class="product-details">
                         <p><strong>Estilo:</strong> Básica do dia a dia</p>
                         <p><strong>Tamanhos:</strong> P, M, G, GG</p>
-                        <p><strong>Cores:</strong> Azul Marinho, Preto, Cinza</p>
+                        <p><strong>Cores:</strong> Azul Marinho, Preto, Cinza (muda automaticamente 🔄)</p>
                     </div>
                     <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Camisa%20Gangster%20B%C3%A1sica." target="_blank" class="btn-primary">Tenho Interesse</a>
                 </div>
@@ -773,6 +773,22 @@
             "suedine-cinza.jpg"
         ];
         criarSlideshow("gangster-suedine-img", imagensGangsterSuedine, 3000);
+
+        // SLIDESHOW 3: CAMISA GANGSTER POLO (CATÁLOGO)
+        const imagensGangsterPolo = [
+            "polo-azul.jpg",
+            "polo-preto.jpg",
+            "polo-cinza.jpg"
+        ];
+        criarSlideshow("polo-gangster-img", imagensGangsterPolo, 3000);
+
+        // SLIDESHOW 4: CAMISA GANGSTER BÁSICA (FORA DO COMBO)
+        const imagensBasicaGangster = [
+            "basica-azul.jpg",
+            "basica-preto.jpg",
+            "basica-cinza.jpg"
+        ];
+        criarSlideshow("basica-gangster-img", imagensBasicaGangster, 3000);
 
         // ANIMAÇÃO FADE-IN NO SCROLL PARA TODAS AS SEÇÕES E CARDS
         document.addEventListener("DOMContentLoaded", function () {
