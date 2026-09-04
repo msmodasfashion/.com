@@ -248,7 +248,7 @@
             transform: translateY(-2px);
         }
 
-        /* APENAS O ÚLTIMO BOTÃO DA SEÇÃO DE CONTATO FICARÁ VERDE */
+        /* BOTÃO VERDE DO WHATSAPP NA SEÇÃO CONTATO */
         .btn-whatsapp-only {
             background: var(--whatsapp-green);
             color: #fff;
@@ -707,9 +707,9 @@
         
         <div class="product-grid">
             
-            <!-- NOVO VESTIDO TAMANHO ÚNICO (VERDE E PRETO) -->
+            <!-- VESTIDO TAMANHO ÚNICO COM TROCA AUTOMÁTICA DE CORES -->
             <div class="product-card glow-effect" style="border: 1px solid var(--gold);">
-                <img id="foto-vestido-novo" src="vestido-verde.jpg" alt="Vestido Tamanho Único" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
+                <img id="vestido-novo-auto-img" class="slideshow-img" src="vestido-verde.jpg" alt="Vestido Tamanho Único" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
                 <div class="product-info">
                     <div class="product-name" style="color: var(--gold);">Vestido Tamanho Único</div>
                     <div class="price-container">
@@ -718,15 +718,8 @@
                     </div>
                     <div class="product-details">
                         <p><strong>Tamanho:</strong> Tamanho Único</p>
-                        <p><strong>Cores Disponíveis:</strong> Verde e Preto (Clique abaixo para alternar 🔄)</p>
+                        <p><strong>Cores Disponíveis:</strong> Verde e Preto (muda automaticamente 🔄)</p>
                     </div>
-                    
-                    <!-- BOTÕES DE ALTERNAR COR -->
-                    <div class="seletor-cores" style="margin-bottom: 1rem; display: flex; gap: 8px;">
-                        <button onclick="mudarCorVestidoNovo('vestido-verde.jpg')" style="flex: 1; background-color: #2e7d32; color: white; border: none; padding: 6px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 0.8rem;">Verde</button>
-                        <button onclick="mudarCorVestidoNovo('vestido-preto.jpg')" style="flex: 1; background-color: #212121; color: white; border: 1px solid var(--gold); padding: 6px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 0.8rem;">Preto</button>
-                    </div>
-
                     <a href="tamanhos.html" class="btn-size-guide">📏 Ver Guia de Tamanhos</a>
                     <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20Vestido%20Tamanho%20%C3%9Anico." target="_blank" class="btn-primary">Tenho Interesse</a>
                 </div>
@@ -861,7 +854,7 @@
         </div>
     </section>
 
-    <!-- SEÇÃO DE CONTATO COM APENAS O ÚLTIMO BOTÃO EM VERDE -->
+    <!-- SEÇÃO DE CONTATO -->
     <section id="contato">
         <h2 class="section-title">Fale com a Gente</h2>
         <div class="contact-grid">
@@ -904,11 +897,6 @@
             navLinks.classList.remove('active');
         }
 
-        // Função para alternar a cor do novo vestido
-        function mudarCorVestidoNovo(caminhoFoto) {
-            document.getElementById('foto-vestido-novo').src = caminhoFoto;
-        }
-
         function criarSlideshow(elementId, listaImagens, intervalo = 3000) {
             const imgElemento = document.getElementById(elementId);
             if (!imgElemento || listaImagens.length === 0) return;
@@ -924,12 +912,13 @@
             }, intervalo);
         }
 
-        // CARROSÉIS DE IMAGENS
+        // CARROSÉIS DE IMAGENS (INCLUINDO O NOVO VESTIDO AUTOMÁTICO)
         criarSlideshow("combo-basica-img", ["basica-azul.jpg", "basica-preto.jpg", "basica-cinza.jpg"], 3000);
         criarSlideshow("vestido-oferta-img", ["vestido-plus-1.jpg", "vestido-plus-2.jpg", "vestido-plus-3.jpg"], 3000);
         criarSlideshow("gangster-suedine-img", ["suedine-azul.jpg", "suedine-preto.jpg", "suedine-cinza.jpg"], 3000);
         criarSlideshow("polo-gangster-img", ["polo-azul.jpg", "polo-preto.jpg", "polo-cinza.jpg"], 3000);
         criarSlideshow("basica-gangster-img", ["basica-azul.jpg", "basica-preto.jpg", "basica-cinza.jpg"], 3000);
+        criarSlideshow("vestido-novo-auto-img", ["vestido-verde.jpg", "vestido-preto.jpg"], 3000);
         criarSlideshow("regata-plus-img", ["regata-plus-1.jpg", "regata-plus-2.jpg", "regata-plus-3.jpg"], 3000);
         criarSlideshow("tshirt-basica-img", ["tshirt-basica-1.jpg", "tshirt-basica-2.jpg", "tshirt-basica-3.jpg"], 3000);
         criarSlideshow("vestido-catalogo-img", ["vestido-plus-1.jpg", "vestido-plus-2.jpg", "vestido-plus-3.jpg"], 3000);
@@ -959,3 +948,4 @@
     </script>
 </body>
 </html>
+
