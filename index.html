@@ -129,7 +129,7 @@
             box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
         }
 
-        /* MENU MOBILE */
+        /* MENU MOBILE COM EFEITO FADE & SLIDE */
         .mobile-toggle {
             display: none;
             background: none;
@@ -409,27 +409,36 @@
             color: var(--text-gray);
         }
 
-        /* RESPONSIVIDADE */
+        /* RESPONSIVIDADE & ANIMAÇÃO DE FADE NO MENU MOBILE */
         @media (max-width: 768px) {
             .mobile-toggle {
                 display: block;
             }
 
             .nav-links {
-                display: none;
                 position: absolute;
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background-color: var(--bg-dark);
+                background-color: rgba(10, 10, 10, 0.98);
                 flex-direction: column;
                 padding: 2rem;
                 border-bottom: 1px solid var(--border-gold);
                 gap: 1.5rem;
+                
+                /* EFEITO FADE-IN SUAVE AO ABRIR */
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-15px);
+                transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+                pointer-events: none;
             }
 
             .nav-links.active {
-                display: flex;
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+                pointer-events: auto;
             }
 
             .hero h1 {
@@ -449,13 +458,13 @@
             <a href="#" class="logo">MS Modas Fashion</a>
             <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Abrir Menu">☰</button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#inicio" onclick="toggleMenu()">Início</a></li>
-                <li><a href="#ofertas" onclick="toggleMenu()">Ofertas</a></li>
-                <li><a href="#catalogo" onclick="toggleMenu()">Catálogo</a></li>
-                <li><a href="#horarios" onclick="toggleMenu()">Horários</a></li>
-                <li><a href="#sobre" onclick="toggleMenu()">Sobre Nós</a></li>
-                <li><a href="#contato" onclick="toggleMenu()">Contato</a></li>
-                <li><a href="#catalogo" class="btn-nav" onclick="toggleMenu()">🛍️ Ver Catálogo</a></li>
+                <li><a href="#inicio" onclick="closeMenu()">Início</a></li>
+                <li><a href="#ofertas" onclick="closeMenu()">Ofertas</a></li>
+                <li><a href="#catalogo" onclick="closeMenu()">Catálogo</a></li>
+                <li><a href="#horarios" onclick="closeMenu()">Horários</a></li>
+                <li><a href="#sobre" onclick="closeMenu()">Sobre Nós</a></li>
+                <li><a href="#contato" onclick="closeMenu()">Contato</a></li>
+                <li><a href="#catalogo" class="btn-nav" onclick="closeMenu()">🛍️ Ver Catálogo</a></li>
             </ul>
         </nav>
     </header>
@@ -475,8 +484,9 @@
         <h2 class="section-title">🔥 Ofertas Especiais</h2>
         <div class="product-grid">
             
+            <!-- COMBO BÁSICAS COM SLIDESHOW AUTOMÁTICO DE CORES -->
             <div class="product-card glow-effect" style="border: 2px solid var(--gold);">
-                <img src="basica-gangster.jpg" alt="Combo 2 Camisas Básicas Gangster" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
+                <img id="combo-basica-img" class="slideshow-img" src="basica-azul.jpg" alt="Combo 2 Camisas Básicas Gangster" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
                 <div class="product-info">
                     <div class="product-name" style="color: var(--gold);">Combo 2 Camisas Básicas Gangster</div>
                     <div class="price-container">
@@ -485,7 +495,7 @@
                     </div>
                     <div class="product-details">
                         <p><strong>Tamanhos:</strong> P, M, G, GG</p>
-                        <p><strong>Cores:</strong> Escolha suas preferidas</p>
+                        <p><strong>Cores:</strong> Escolha suas preferidas (muda automaticamente 🔄)</p>
                     </div>
                     <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Quero%20aproveitar%20a%20promo%C3%A7%C3%A3o%20de%202%20B%C3%A1sicas%20por%20100" target="_blank" class="btn-primary">Quero Aproveitar</a>
                 </div>
@@ -721,35 +731,50 @@
     </footer>
 
     <script>
+        // CONTROLE DO MENU MOBILE (ABRIR E FECHAR COM FADE)
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('active');
         }
 
-        // SCRIPT 1: SLIDESHOW AUTOMÁTICO DE CORES DO PRODUTO
-        const imagensGangster = [
+        function closeMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.remove('active');
+        }
+
+        // FUNÇÃO REUTILIZÁVEL PARA SLIDESHOW AUTOMÁTICO DE IMAGENS
+        function criarSlideshow(elementId, listaImagens, intervalo = 3000) {
+            const imgElemento = document.getElementById(elementId);
+            if (!imgElemento || listaImagens.length === 0) return;
+
+            let indice = 0;
+            setInterval(() => {
+                imgElemento.style.opacity = "0.3";
+                setTimeout(() => {
+                    indice = (indice + 1) % listaImagens.length;
+                    imgElemento.src = listaImagens[indice];
+                    imgElemento.style.opacity = "1";
+                }, 300);
+            }, intervalo);
+        }
+
+        // SLIDESHOW 1: COMBO 2 BÁSICAS GANGSTER (OFERTA)
+        const imagensComboBasica = [
+            "basica-azul.jpg",
+            "basica-preto.jpg",
+            "basica-cinza.jpg"
+        ];
+        criarSlideshow("combo-basica-img", imagensComboBasica, 3000);
+
+        // SLIDESHOW 2: CAMISETA GANGSTER MALHA SUEDINE (CATÁLOGO)
+        const imagensGangsterSuedine = [
             "suedine-azul.jpg",
             "suedine-preto.jpg",
             "suedine-cinza.jpg"
         ];
-        
-        let indiceImgAtual = 0;
-        const imgElemento = document.getElementById("gangster-suedine-img");
+        criarSlideshow("gangster-suedine-img", imagensGangsterSuedine, 3000);
 
-        if (imgElemento) {
-            setInterval(() => {
-                // Efeito suave de opacidade
-                imgElemento.style.opacity = "0.3";
-                
-                setTimeout(() => {
-                    indiceImgAtual = (indiceImgAtual + 1) % imagensGangster.length;
-                    imgElemento.src = imagensGangster[indiceImgAtual];
-                    imgElemento.style.opacity = "1";
-                }, 300); // 300ms de transição
-            }, 3000); // Troca de foto a cada 3 segundos
-        }
-
-        // SCRIPT 2: ANIMAÇÃO FADE-IN NO SCROLL PARA TODAS AS SEÇÕES
+        // ANIMAÇÃO FADE-IN NO SCROLL PARA TODAS AS SEÇÕES E CARDS
         document.addEventListener("DOMContentLoaded", function () {
             const observerOptions = {
                 threshold: 0.15
