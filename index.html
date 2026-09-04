@@ -36,7 +36,6 @@
             line-height: 1.6;
         }
 
-        /* ANIMAÇÃO DE FADE NO SCROLL */
         .fade-in {
             opacity: 0;
             transform: translateY(25px);
@@ -48,7 +47,6 @@
             transform: translateY(0);
         }
 
-        /* EFEITO GLOW PULSANTE EM DESTAQUE */
         .glow-effect {
             animation: goldGlow 2.5s infinite alternate ease-in-out;
         }
@@ -62,7 +60,6 @@
             }
         }
 
-        /* BOTÃO FLUTUANTE DO WHATSAPP */
         .whatsapp-float {
             position: fixed;
             width: 60px;
@@ -97,22 +94,15 @@
         }
 
         @keyframes pulseWhatsapp {
-            0% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-            }
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
         .slideshow-img {
             transition: opacity 0.5s ease-in-out;
         }
 
-        /* HEADER & NAVBAR */
         header {
             background-color: rgba(10, 10, 10, 0.95);
             border-bottom: 1px solid var(--border-gold);
@@ -139,7 +129,6 @@
             text-decoration: none;
             letter-spacing: 2px;
             text-transform: uppercase;
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
         }
 
         .nav-links {
@@ -187,7 +176,6 @@
             cursor: pointer;
         }
 
-        /* HERO SECTION */
         .hero {
             padding: 6rem 2rem;
             text-align: center;
@@ -225,7 +213,6 @@
             flex-wrap: wrap;
         }
 
-        /* BOTÃO DOURADO PRINCIPAL */
         .btn-primary {
             background: linear-gradient(135deg, var(--gold), var(--gold-hover));
             color: #000;
@@ -248,7 +235,6 @@
             transform: translateY(-2px);
         }
 
-        /* APENAS O ÚLTIMO BOTÃO DA SEÇÃO DE CONTATO FICARÁ VERDE */
         .btn-whatsapp-only {
             background: var(--whatsapp-green);
             color: #fff;
@@ -308,7 +294,6 @@
             text-decoration: underline;
         }
 
-        /* SEÇÕES GERAIS */
         section {
             padding: 5rem 2rem;
             max-width: 1200px;
@@ -341,7 +326,6 @@
             padding-left: 0.8rem;
         }
 
-        /* GRID DE PRODUTOS */
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -404,7 +388,6 @@
             margin-bottom: 0.2rem;
         }
 
-        /* SOBRE, HORÁRIOS E LOCALIZAÇÃO */
         .about-content {
             background-color: var(--bg-card);
             border: 1px solid var(--border-gold);
@@ -460,7 +443,6 @@
             margin-bottom: 1rem;
         }
 
-        /* FOOTER */
         footer {
             background-color: #000;
             border-top: 1px solid var(--border-gold);
@@ -496,7 +478,6 @@
             color: var(--text-gray);
         }
 
-        /* RESPONSIVIDADE */
         @media (max-width: 768px) {
             .mobile-toggle {
                 display: block;
@@ -526,13 +507,8 @@
                 pointer-events: auto;
             }
 
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .hero h2 {
-                font-size: 1rem;
-            }
+            .hero h1 { font-size: 2.2rem; }
+            .hero h2 { font-size: 1rem; }
 
             .whatsapp-float {
                 width: 50px;
@@ -550,7 +526,6 @@
 </head>
 <body>
 
-    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
     <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20atendimento." class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
             <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
@@ -559,18 +534,18 @@
 
     <header>
         <nav class="nav-container">
-            <a href="#" class="logo">MS Modas Fashion</a>
+            <a href="index.html" class="logo">MS Modas Fashion</a>
             <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Abrir Menu">☰</button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#inicio" onclick="closeMenu()">Início</a></li>
-                <li><a href="#ofertas" onclick="closeMenu()">Ofertas</a></li>
-                <li><a href="#catalogo" onclick="closeMenu()">Catálogo</a></li>
+                <li><a href="index.html" onclick="closeMenu()">Início</a></li>
+                <li><a href="index.html#ofertas" onclick="closeMenu()">Ofertas</a></li>
+                <li><a href="index.html#catalogo" onclick="closeMenu()">Catálogo</a></li>
                 <li><a href="tamanhos.html" onclick="closeMenu()">📏 Guia de Tamanhos</a></li>
-                <li><a href="#faq" onclick="closeMenu()">FAQ</a></li>
-                <li><a href="#horarios" onclick="closeMenu()">Horários</a></li>
-                <li><a href="#sobre" onclick="closeMenu()">Sobre Nós</a></li>
-                <li><a href="#contato" onclick="closeMenu()">Contato</a></li>
-                <li><a href="#catalogo" class="btn-nav" onclick="closeMenu()">🛍️ Ver Catálogo</a></li>
+                <li><a href="faq.html" onclick="closeMenu()">❓ FAQ</a></li>
+                <li><a href="index.html#horarios" onclick="closeMenu()">Horários</a></li>
+                <li><a href="index.html#sobre" onclick="closeMenu()">Sobre Nós</a></li>
+                <li><a href="index.html#contato" onclick="closeMenu()">Contato</a></li>
+                <li><a href="index.html#catalogo" class="btn-nav" onclick="closeMenu()">🛍️ Ver Catálogo</a></li>
             </ul>
         </nav>
     </header>
@@ -633,9 +608,7 @@
     <section id="catalogo">
         <h2 class="section-title">Catálogo</h2>
 
-        <!-- MODA MASCULINA -->
         <h3 class="category-title" style="margin-top: 2rem;">👕 Moda Masculina</h3>
-        
         <h4 style="color: var(--gold); margin-bottom: 1rem; font-size: 1.2rem;">✨ Gangster Especial</h4>
         <div class="product-grid">
             
@@ -649,12 +622,12 @@
                     </div>
                     <div class="product-details">
                         <p><strong>Tecido:</strong> Malha Suedine (Toque Macio e aveludado)</p>
-                        <p><strong>Diferencial:</strong> Alta durabilidade, caimento perfeito e conforto premium</p>
+                        <p><strong>Diferencial:</strong> Alta durabilidade e conforto premium</p>
                         <p><strong>Tamanhos:</strong> P, M, G, GG</p>
                         <p><strong>Cores:</strong> Azul Marinho, Preto, Cinza (muda automaticamente 🔄)</p>
                     </div>
                     <a href="tamanhos.html" class="btn-size-guide">📏 Ver Guia de Tamanhos</a>
-                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Camiseta%20Gangster%20Malha%20Suedine." target="_blank" class="btn-primary">Tenho Interesse</a>
+                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Camiseta%20Gangster%20Malha%20Suedine." target="_blank" class="btn-primary">Tenho Interesse</a>
                 </div>
             </div>
 
@@ -668,12 +641,11 @@
                     </div>
                     <div class="product-details">
                         <p><strong>Estilo:</strong> Polo Clássica Gangster</p>
-                        <p><strong>Acabamento:</strong> Gola estruturada e bordado exclusivo</p>
                         <p><strong>Tamanhos:</strong> P, M, G, GG</p>
                         <p><strong>Cores:</strong> Azul Marinho, Preto, Cinza (muda automaticamente 🔄)</p>
                     </div>
                     <a href="tamanhos.html" class="btn-size-guide">📏 Ver Guia de Tamanhos</a>
-                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Camisa%20Gangster%20Polo." target="_blank" class="btn-primary">Tenho Interesse</a>
+                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Camisa%20Gangster%20Polo." target="_blank" class="btn-primary">Tenho Interesse</a>
                 </div>
             </div>
 
@@ -681,7 +653,6 @@
 
         <h4 style="color: var(--text-gray); margin-top: 2.5rem; margin-bottom: 1rem;">Camisetas Básicas e Casuais</h4>
         <div class="product-grid">
-            
             <div class="product-card glow-effect">
                 <img id="basica-gangster-img" class="slideshow-img" src="basica-azul.jpg" alt="Camisa Gangster Básica" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
                 <div class="product-info">
@@ -691,20 +662,16 @@
                         <p style="font-size: 0.9rem; color: var(--text-gray);">R$ 70,00 no cartão</p>
                     </div>
                     <div class="product-details">
-                        <p><strong>Estilo:</strong> Básica do dia a dia</p>
                         <p><strong>Tamanhos:</strong> P, M, G, GG</p>
                         <p><strong>Cores:</strong> Azul Marinho, Preto, Cinza (muda automaticamente 🔄)</p>
                     </div>
                     <a href="tamanhos.html" class="btn-size-guide">📏 Ver Guia de Tamanhos</a>
-                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Camisa%20Gangster%20B%C3%A1sica." target="_blank" class="btn-primary">Tenho Interesse</a>
+                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Camisa%20Gangster%20B%C3%A1sica." target="_blank" class="btn-primary">Tenho Interesse</a>
                 </div>
             </div>
-
         </div>
 
-        <!-- MODA FEMININA -->
         <h3 class="category-title" style="margin-top: 4rem;">👗 Moda Feminina</h3>
-        
         <div class="product-grid">
             
             <div class="product-card glow-effect">
@@ -717,10 +684,9 @@
                     </div>
                     <div class="product-details">
                         <p><strong>Tamanho:</strong> Tamanho Único</p>
-                        <p><strong>Cores:</strong> Diversas opções (muda automaticamente 🔄)</p>
                     </div>
                     <a href="tamanhos.html" class="btn-size-guide">📏 Ver Guia de Tamanhos</a>
-                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Regata%20Viscolycra." target="_blank" class="btn-primary">Tenho Interesse</a>
+                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Regata%20Viscolycra." target="_blank" class="btn-primary">Tenho Interesse</a>
                 </div>
             </div>
 
@@ -736,7 +702,7 @@
                         <p><strong>Tamanho:</strong> G1</p>
                     </div>
                     <a href="tamanhos.html" class="btn-size-guide">📏 Ver Guia de Tamanhos</a>
-                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Camiseta%20Plus%20Size%20G1." target="_blank" class="btn-primary">Tenho Interesse</a>
+                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Camiseta%20Plus%20Size%20G1." target="_blank" class="btn-primary">Tenho Interesse</a>
                 </div>
             </div>
 
@@ -750,10 +716,9 @@
                     </div>
                     <div class="product-details">
                         <p><strong>Tamanho:</strong> Tamanho Único</p>
-                        <p><strong>Cores:</strong> Diversas opções (muda automaticamente 🔄)</p>
                     </div>
                     <a href="tamanhos.html" class="btn-size-guide">📏 Ver Guia de Tamanhos</a>
-                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20T-shirt%20B%C3%A1sica." target="_blank" class="btn-primary">Tenho Interesse</a>
+                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20T-shirt%20B%C3%A1sica." target="_blank" class="btn-primary">Tenho Interesse</a>
                 </div>
             </div>
 
@@ -767,39 +732,10 @@
                     </div>
                     <div class="product-details">
                         <p><strong>Modelagem:</strong> Plus Size</p>
-                        <p><strong>Cores:</strong> Diversas estampas e modelos (muda automaticamente 🔄)</p>
                     </div>
                     <a href="tamanhos.html" class="btn-size-guide">📏 Ver Guia de Tamanhos</a>
-                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20Vestido%20Plus%20Size." target="_blank" class="btn-primary">Tenho Interesse</a>
+                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Vestido%20Plus%20Size." target="_blank" class="btn-primary">Tenho Interesse</a>
                 </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SEÇÃO DE FAQ (PERGUNTAS FREQUENTES) -->
-    <section id="faq">
-        <h2 class="section-title">❓ Dúvidas Frequentes</h2>
-        <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;">
-            
-            <div class="contact-card glow-effect" style="text-align: left;">
-                <h3 style="color: var(--gold); margin-bottom: 0.5rem; font-size: 1.1rem;">📍 Posso retirar o produto pessoalmente na loja?</h3>
-                <p style="color: var(--text-gray); font-size: 0.95rem;">Sim! Você pode comprar online e retirar diretamente na nossa loja física na Rodoviária de Aparecida — Box 5, em Aparecida-SP, nos horários de atendimento presencial.</p>
-            </div>
-
-            <div class="contact-card glow-effect" style="text-align: left;">
-                <h3 style="color: var(--gold); margin-bottom: 0.5rem; font-size: 1.1rem;">💳 Quais são as formas de pagamento aceitas?</h3>
-                <p style="color: var(--text-gray); font-size: 0.95rem;">Aceitamos pagamento via PIX (que possui descontos especiais na maioria dos produtos) e também cartões de crédito/débito.</p>
-            </div>
-
-            <div class="contact-card glow-effect" style="text-align: left;">
-                <h3 style="color: var(--gold); margin-bottom: 0.5rem; font-size: 1.1rem;">🔄 Como funciona a política de trocas?</h3>
-                <p style="color: var(--text-gray); font-size: 0.95rem;">Trocas por tamanho ou modelo podem ser feitas diretamente na loja física ou combinadas através do nosso atendimento via WhatsApp, respeitando o prazo e as condições da peça com etiqueta.</p>
-            </div>
-
-            <div class="contact-card glow-effect" style="text-align: left;">
-                <h3 style="color: var(--gold); margin-bottom: 0.5rem; font-size: 1.1rem;">📦 Vocês fazem envios para outras cidades?</h3>
-                <p style="color: var(--text-gray); font-size: 0.95rem;">Entre em contato conosco pelo WhatsApp para consultarmos a disponibilidade de envio para a sua região!</p>
             </div>
 
         </div>
@@ -809,18 +745,15 @@
     <section id="horarios">
         <h2 class="section-title">⏰ Horário de Atendimento</h2>
         <div class="hours-grid">
-            
             <div class="hours-card glow-effect">
                 <h3>🏪 Atendimento Presencial</h3>
                 <p><strong>Quarta, Quinta e Sexta:</strong> 14:00 às 18:00</p>
                 <p style="margin-top: 0.5rem;"><strong>Sábado e Domingo:</strong> 10:00 às 18:00</p>
             </div>
-
             <div class="hours-card glow-effect">
                 <h3>💬 Atendimento Online (WhatsApp)</h3>
                 <p><strong>Segunda a Segunda:</strong> 12:00 às 22:00</p>
             </div>
-
         </div>
     </section>
 
@@ -828,7 +761,6 @@
         <h2 class="section-title">Sobre a MS Modas Fashion</h2>
         <div class="about-content glow-effect">
             <p>A MS Modas Fashion oferece moda feminina e masculina para quem busca qualidade, estilo e bom preço em Aparecida-SP. Estamos localizados no coração da cidade, no Box 5 da Rodoviária de Aparecida. Venha nos visitar ou faça seu pedido online!</p>
-            
             <div class="location-info">
                 <p style="margin-bottom: 1.5rem;">📍 <strong>Rodoviária de Aparecida — Box 5, Aparecida - SP</strong></p>
                 <a href="https://maps.google.com/?q=Rodoviaria+de+Aparecida+SP" target="_blank" class="btn-secondary">Como Chegar</a>
@@ -836,23 +768,19 @@
         </div>
     </section>
 
-    <!-- SEÇÃO DE CONTATO COM APENAS O ÚLTIMO BOTÃO EM VERDE -->
     <section id="contato">
         <h2 class="section-title">Fale com a Gente</h2>
         <div class="contact-grid">
-            
             <div class="contact-card glow-effect">
                 <h3>📱 WhatsApp</h3>
                 <p style="margin-bottom: 1rem;">(12) 99709-6039</p>
                 <a href="https://wa.me/5512997096039" target="_blank" class="btn-whatsapp-only">Chamar no WhatsApp</a>
             </div>
-
             <div class="contact-card glow-effect">
                 <h3>📸 Instagram</h3>
                 <p style="margin-bottom: 1rem;">@ms_modasfashion_</p>
                 <a href="https://instagram.com/ms_modasfashion_" target="_blank" class="btn-primary">Siga no Instagram</a>
             </div>
-
         </div>
     </section>
 
@@ -894,7 +822,6 @@
             }, intervalo);
         }
 
-        // CARROSÉIS DE IMAGENS
         criarSlideshow("combo-basica-img", ["basica-azul.jpg", "basica-preto.jpg", "basica-cinza.jpg"], 3000);
         criarSlideshow("vestido-oferta-img", ["vestido-plus-1.jpg", "vestido-plus-2.jpg", "vestido-plus-3.jpg"], 3000);
         criarSlideshow("gangster-suedine-img", ["suedine-azul.jpg", "suedine-preto.jpg", "suedine-cinza.jpg"], 3000);
@@ -904,13 +831,10 @@
         criarSlideshow("tshirt-basica-img", ["tshirt-basica-1.jpg", "tshirt-basica-2.jpg", "tshirt-basica-3.jpg"], 3000);
         criarSlideshow("vestido-catalogo-img", ["vestido-plus-1.jpg", "vestido-plus-2.jpg", "vestido-plus-3.jpg"], 3000);
 
-        // CORREÇÃO DO FADE-IN NO SCROLL
         document.addEventListener("DOMContentLoaded", function () {
             const elementsToAnimate = document.querySelectorAll("section, .product-card, .hours-card, .about-content, .contact-card");
-
             if ('IntersectionObserver' in window) {
                 const observerOptions = { threshold: 0.1 };
-
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
@@ -919,7 +843,6 @@
                         }
                     });
                 }, observerOptions);
-
                 elementsToAnimate.forEach(el => {
                     el.classList.add("fade-in");
                     observer.observe(el);
@@ -929,4 +852,3 @@
     </script>
 </body>
 </html>
-
