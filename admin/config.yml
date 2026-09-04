@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: msmodasfashion/ms-modas-fashion
+  branch: main
+
+media_folder: "img"
+public_folder: "/img"
+
+collections:
+  - name: "produtos"
+    label: "Produtos"
+    folder: "conteudo/produtos"
+    create: true
+    fields:
+      - {label: "Nome do Produto", name: "title", widget: "string"}
+      - {label: "Preço PIX", name: "preco_pix", widget: "string"}
+      - {label: "Preço Cartão", name: "preco_cartao", widget: "string"}
+      - {label: "Foto", name: "image", widget: "image"}
+
