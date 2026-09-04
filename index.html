@@ -34,7 +34,7 @@
             line-height: 1.6;
         }
 
-        /* ANIMAÇÃO DE FADE NO SCROLL */
+        /* ANIMAÇÃO DE FADE NO SCROLL (APLICADA DINAMICAMENTE) */
         .fade-in {
             opacity: 0;
             transform: translateY(25px);
@@ -425,8 +425,6 @@
                 padding: 2rem;
                 border-bottom: 1px solid var(--border-gold);
                 gap: 1.5rem;
-                
-                /* EFEITO FADE-IN SUAVE AO ABRIR */
                 opacity: 0;
                 visibility: hidden;
                 transform: translateY(-15px);
@@ -484,7 +482,6 @@
         <h2 class="section-title">🔥 Ofertas Especiais</h2>
         <div class="product-grid">
             
-            <!-- COMBO BÁSICAS COM SLIDESHOW AUTOMÁTICO DE CORES -->
             <div class="product-card glow-effect" style="border: 2px solid var(--gold);">
                 <img id="combo-basica-img" class="slideshow-img" src="basica-azul.jpg" alt="Combo 2 Camisas Básicas Gangster" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
                 <div class="product-info">
@@ -501,7 +498,6 @@
                 </div>
             </div>
 
-            <!-- VESTIDO PLUS SIZE EM OFERTA COM SLIDESHOW AUTOMÁTICO -->
             <div class="product-card glow-effect" style="border: 2px solid var(--gold);">
                 <img id="vestido-oferta-img" class="slideshow-img" src="vestido-plus-1.jpg" alt="Vestido Plus Size Em Oferta" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
                 <div class="product-info">
@@ -530,11 +526,9 @@
         <!-- MODA MASCULINA -->
         <h3 class="category-title" style="margin-top: 2rem;">👕 Moda Masculina</h3>
         
-        <!-- LINHA GANGSTER ESPECIAL -->
         <h4 style="color: var(--gold); margin-bottom: 1rem; font-size: 1.2rem;">✨ Gangster Especial</h4>
         <div class="product-grid">
             
-            <!-- Camiseta Gangster Malha Suedine COM CARROSSEL AUTOMÁTICO DE CORES -->
             <div class="product-card glow-effect" style="border: 1px solid var(--gold);">
                 <img id="gangster-suedine-img" class="slideshow-img" src="suedine-azul.jpg" alt="Camiseta Gangster Malha Suedine" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
                 <div class="product-info">
@@ -553,7 +547,6 @@
                 </div>
             </div>
 
-            <!-- Camisa Gangster Polo COM CARROSSEL AUTOMÁTICO DE CORES -->
             <div class="product-card glow-effect" style="border: 1px solid var(--gold);">
                 <img id="polo-gangster-img" class="slideshow-img" src="polo-azul.jpg" alt="Camisa Gangster Polo" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
                 <div class="product-info">
@@ -574,11 +567,9 @@
 
         </div>
 
-        <!-- OUTROS MODELOS MASCULINOS -->
         <h4 style="color: var(--text-gray); margin-top: 2.5rem; margin-bottom: 1rem;">Camisetas Básicas e Casuais</h4>
         <div class="product-grid">
             
-            <!-- Camisa Gangster Básica COM CARROSSEL AUTOMÁTICO DE CORES -->
             <div class="product-card glow-effect">
                 <img id="basica-gangster-img" class="slideshow-img" src="basica-azul.jpg" alt="Camisa Gangster Básica" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
                 <div class="product-info">
@@ -603,7 +594,6 @@
         
         <div class="product-grid">
             
-            <!-- Regata Plus Size COM CARROSSEL AUTOMÁTICO DE CORES -->
             <div class="product-card glow-effect">
                 <img id="regata-plus-img" class="slideshow-img" src="regata-plus-1.jpg" alt="Regata Plus Size" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
                 <div class="product-info">
@@ -620,7 +610,6 @@
                 </div>
             </div>
 
-            <!-- Camiseta Plus Size G1 -->
             <div class="product-card glow-effect">
                 <img src="camiseta-plus-size.jpg" alt="Camiseta Plus Size G1" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
                 <div class="product-info">
@@ -636,9 +625,8 @@
                 </div>
             </div>
 
-            <!-- T-shirt Básica -->
             <div class="product-card glow-effect">
-                <img src="tshirt-basica.jpg" alt="T-shirt Básica" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
+                <img id="tshirt-basica-img" class="slideshow-img" src="tshirt-basica-1.jpg" alt="T-shirt Básica" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
                 <div class="product-info">
                     <div class="product-name">T-shirt Básica</div>
                     <div class="price-container">
@@ -647,12 +635,12 @@
                     </div>
                     <div class="product-details">
                         <p><strong>Tamanho:</strong> Tamanho Único</p>
+                        <p><strong>Cores:</strong> Diversas opções (muda automaticamente 🔄)</p>
                     </div>
                     <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20T-shirt%20B%C3%A1sica." target="_blank" class="btn-primary">Tenho Interesse</a>
                 </div>
             </div>
 
-            <!-- Regata Viscolycra -->
             <div class="product-card glow-effect">
                 <img src="regata-viscolycra.jpg" alt="Regata Viscolycra" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
                 <div class="product-info">
@@ -668,7 +656,6 @@
                 </div>
             </div>
 
-            <!-- Vestido Plus Size COM CARROSSEL AUTOMÁTICO DE CORES -->
             <div class="product-card glow-effect">
                 <img id="vestido-catalogo-img" class="slideshow-img" src="vestido-plus-1.jpg" alt="Vestido Plus Size" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
                 <div class="product-info">
@@ -751,7 +738,6 @@
     </footer>
 
     <script>
-        // CONTROLE DO MENU MOBILE (ABRIR E FECHAR COM FADE)
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('active');
@@ -762,7 +748,6 @@
             navLinks.classList.remove('active');
         }
 
-        // FUNÇÃO REUTILIZÁVEL PARA SLIDESHOW AUTOMÁTICO DE IMAGENS
         function criarSlideshow(elementId, listaImagens, intervalo = 3000) {
             const imgElemento = document.getElementById(elementId);
             if (!imgElemento || listaImagens.length === 0) return;
@@ -778,82 +763,837 @@
             }, intervalo);
         }
 
-        // SLIDESHOW 1: COMBO 2 BÁSICAS GANGSTER (OFERTA)
-        const imagensComboBasica = [
-            "basica-azul.jpg",
-            "basica-preto.jpg",
-            "basica-cinza.jpg"
-        ];
-        criarSlideshow("combo-basica-img", imagensComboBasica, 3000);
+        // CARROSÉIS DE IMAGENS
+        criarSlideshow("combo-basica-img", ["basica-azul.jpg", "basica-preto.jpg", "basica-cinza.jpg"], 3000);
+        criarSlideshow("vestido-oferta-img", ["vestido-plus-1.jpg", "vestido-plus-2.jpg", "vestido-plus-3.jpg"], 3000);
+        criarSlideshow("gangster-suedine-img", ["suedine-azul.jpg", "suedine-preto.jpg", "suedine-cinza.jpg"], 3000);
+        criarSlideshow("polo-gangster-img", ["polo-azul.jpg", "polo-preto.jpg", "polo-cinza.jpg"], 3000);
+        criarSlideshow("basica-gangster-img", ["basica-azul.jpg", "basica-preto.jpg", "basica-cinza.jpg"], 3000);
+        criarSlideshow("regata-plus-img", ["regata-plus-1.jpg", "regata-plus-2.jpg", "regata-plus-3.jpg"], 3000);
+        criarSlideshow("tshirt-basica-img", ["tshirt-basica-1.jpg", "tshirt-basica-2.jpg", "tshirt-basica-3.jpg"], 3000);
+        criarSlideshow("vestido-catalogo-img", ["vestido-plus-1.jpg", "vestido-plus-2.jpg", "vestido-plus-3.jpg"], 3000);
 
-        // SLIDESHOW 2: VESTIDO PLUS SIZE (OFERTA)
-        const imagensVestidoOferta = [
-            "vestido-plus-1.jpg",
-            "vestido-plus-2.jpg",
-            "vestido-plus-3.jpg"
-        ];
-        criarSlideshow("vestido-oferta-img", imagensVestidoOferta, 3000);
-
-        // SLIDESHOW 3: CAMISETA GANGSTER MALHA SUEDINE (CATÁLOGO)
-        const imagensGangsterSuedine = [
-            "suedine-azul.jpg",
-            "suedine-preto.jpg",
-            "suedine-cinza.jpg"
-        ];
-        criarSlideshow("gangster-suedine-img", imagensGangsterSuedine, 3000);
-
-        // SLIDESHOW 4: CAMISA GANGSTER POLO (CATÁLOGO)
-        const imagensGangsterPolo = [
-            "polo-azul.jpg",
-            "polo-preto.jpg",
-            "polo-cinza.jpg"
-        ];
-        criarSlideshow("polo-gangster-img", imagensGangsterPolo, 3000);
-
-        // SLIDESHOW 5: CAMISA GANGSTER BÁSICA (CATÁLOGO)
-        const imagensBasicaGangster = [
-            "basica-azul.jpg",
-            "basica-preto.jpg",
-            "basica-cinza.jpg"
-        ];
-        criarSlideshow("basica-gangster-img", imagensBasicaGangster, 3000);
-
-        // SLIDESHOW 6: REGATA PLUS SIZE (CATÁLOGO)
-        const imagensRegataPlus = [
-            "regata-plus-1.jpg",
-            "regata-plus-2.jpg",
-            "regata-plus-3.jpg"
-        ];
-        criarSlideshow("regata-plus-img", imagensRegataPlus, 3000);
-
-        // SLIDESHOW 7: VESTIDO PLUS SIZE (CATÁLOGO)
-        const imagensVestidoCatalogo = [
-            "vestido-plus-1.jpg",
-            "vestido-plus-2.jpg",
-            "vestido-plus-3.jpg"
-        ];
-        criarSlideshow("vestido-catalogo-img", imagensVestidoCatalogo, 3000);
-
-        // ANIMAÇÃO FADE-IN NO SCROLL PARA TODAS AS SEÇÕES E CARDS
+        // CORREÇÃO DO FADE-IN NO SCROLL
         document.addEventListener("DOMContentLoaded", function () {
-            const observerOptions = {
-                threshold: 0.15
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("visible");
-                    }
-                });
-            }, observerOptions);
-
             const elementsToAnimate = document.querySelectorAll("section, .product-card, .hours-card, .about-content, .contact-card");
+
+            if ('IntersectionObserver' in window) {
+                const observerOptions = { threshold: 0.1 };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, observerOptions);
+
+                elementsToAnimate.forEach(el => {
+                    el.classList.add("fade-in");
+                    observer.observe(el);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS Modas Fashion | Moda Feminina e Masculina em Aparecida-SP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #0a0a0a;
+            --bg-card: #141414;
+            --gold: #d4af37;
+            --gold-light: #f3e5ab;
+            --gold-hover: #b89628;
+            --text-light: #f5f5f5;
+            --text-gray: #a0a0a0;
+            --border-gold: rgba(212, 175, 55, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* ANIMAÇÃO DE FADE NO SCROLL (APLICADA DINAMICAMENTE) */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* EFEITO GLOW PULSANTE EM DESTAQUE */
+        .glow-effect {
+            animation: goldGlow 2.5s infinite alternate ease-in-out;
+        }
+
+        @keyframes goldGlow {
+            from {
+                box-shadow: 0 0 8px rgba(212, 175, 55, 0.3), 0 0 15px rgba(212, 175, 55, 0.15);
+            }
+            to {
+                box-shadow: 0 0 22px rgba(212, 175, 55, 0.75), 0 0 35px rgba(212, 175, 55, 0.45);
+            }
+        }
+
+        /* EFEITO DE TRANSIÇÃO SUAVE PARA AS IMAGENS DO SLIDESHOW */
+        .slideshow-img {
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        /* HEADER & NAVBAR */
+        header {
+            background-color: rgba(10, 10, 10, 0.95);
+            border-bottom: 1px solid var(--border-gold);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .btn-nav {
+            background: linear-gradient(135deg, var(--gold), var(--gold-hover));
+            color: #000 !important;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s !important;
+        }
+
+        .btn-nav:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        /* MENU MOBILE COM EFEITO FADE & SLIDE */
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--gold);
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 6rem 2rem;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(10,10,10,0.8) 0%, rgba(20,20,20,1) 100%);
+            border-bottom: 1px solid var(--border-gold);
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+            letter-spacing: 3px;
+        }
+
+        .hero h2 {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: var(--text-light);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* BOTÕES GERAIS */
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), var(--gold-hover));
+            color: #000;
+            padding: 0.8rem 1.8rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            padding: 0.8rem 1.8rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold-light);
+        }
+
+        /* SEÇÕES GERAIS */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: var(--gold);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: var(--gold);
+            margin: 0.5rem auto 0;
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            margin: 2rem 0 1.5rem;
+            border-left: 3px solid var(--gold);
+            padding-left: 0.8rem;
+        }
+
+        /* GRID DE PRODUTOS */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-info {
+            padding: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .price-container {
+            margin-bottom: 0.8rem;
+        }
+
+        .price-old {
+            text-decoration: line-through;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-right: 0.5rem;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        .product-details {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin-bottom: 1.2rem;
+            flex-grow: 1;
+        }
+
+        .product-details p {
+            margin-bottom: 0.2rem;
+        }
+
+        /* SOBRE, HORÁRIOS E LOCALIZAÇÃO */
+        .about-content {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            padding: 2.5rem;
+            border-radius: 6px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hours-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .hours-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 6px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .hours-card h3 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .location-info {
+            margin-top: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .contact-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            padding: 2rem;
+            border-radius: 6px;
+        }
+
+        .contact-card h3 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #000;
+            border-top: 1px solid var(--border-gold);
+            padding: 3rem 2rem 1.5rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            color: var(--gold);
+        }
+
+        .footer-info {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.8rem;
+            color: var(--text-gray);
+        }
+
+        /* RESPONSIVIDADE & ANIMAÇÃO DE FADE NO MENU MOBILE */
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: rgba(10, 10, 10, 0.98);
+                flex-direction: column;
+                padding: 2rem;
+                border-bottom: 1px solid var(--border-gold);
+                gap: 1.5rem;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-15px);
+                transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
+                pointer-events: none;
+            }
+
+            .nav-links.active {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+                pointer-events: auto;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero h2 {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="nav-container">
+            <a href="#" class="logo">MS Modas Fashion</a>
+            <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Abrir Menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio" onclick="closeMenu()">Início</a></li>
+                <li><a href="#ofertas" onclick="closeMenu()">Ofertas</a></li>
+                <li><a href="#catalogo" onclick="closeMenu()">Catálogo</a></li>
+                <li><a href="#horarios" onclick="closeMenu()">Horários</a></li>
+                <li><a href="#sobre" onclick="closeMenu()">Sobre Nós</a></li>
+                <li><a href="#contato" onclick="closeMenu()">Contato</a></li>
+                <li><a href="#catalogo" class="btn-nav" onclick="closeMenu()">🛍️ Ver Catálogo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h1>MS MODAS FASHION</h1>
+        <h2>Seu estilo começa aqui.</h2>
+        <p>Moda feminina e masculina em Aparecida-SP. Venha conhecer nossa loja na Rodoviária de Aparecida, Box 5.</p>
+        <div class="hero-buttons">
+            <a href="#catalogo" class="btn-primary" style="width: auto;">Ver Catálogo</a>
+            <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" class="btn-secondary">Falar no WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- OFERTAS ESPECIAIS -->
+    <section id="ofertas">
+        <h2 class="section-title">🔥 Ofertas Especiais</h2>
+        <div class="product-grid">
             
-            elementsToAnimate.forEach(el => {
-                el.classList.add("fade-in");
-                observer.observe(el);
-            });
+            <div class="product-card glow-effect" style="border: 2px solid var(--gold);">
+                <img id="combo-basica-img" class="slideshow-img" src="basica-azul.jpg" alt="Combo 2 Camisas Básicas Gangster" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
+                <div class="product-info">
+                    <div class="product-name" style="color: var(--gold);">Combo 2 Camisas Básicas Gangster</div>
+                    <div class="price-container">
+                        <span class="price">2 por R$ 100,00 no PIX</span>
+                        <p style="font-size: 0.9rem; color: var(--text-gray);">R$ 110,00 no cartão</p>
+                    </div>
+                    <div class="product-details">
+                        <p><strong>Tamanhos:</strong> P, M, G, GG</p>
+                        <p><strong>Cores:</strong> Escolha suas preferidas (muda automaticamente 🔄)</p>
+                    </div>
+                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Quero%20aproveitar%20a%20promo%C3%A7%C3%A3o%20de%202%20B%C3%A1sicas%20por%20100" target="_blank" class="btn-primary">Quero Aproveitar</a>
+                </div>
+            </div>
+
+            <div class="product-card glow-effect" style="border: 2px solid var(--gold);">
+                <img id="vestido-oferta-img" class="slideshow-img" src="vestido-plus-1.jpg" alt="Vestido Plus Size Em Oferta" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
+                <div class="product-info">
+                    <div class="product-name" style="color: var(--gold);">Vestido Plus Size</div>
+                    <div class="price-container">
+                        <span class="price-old">R$ 149,99</span>
+                        <span class="price">R$ 100,00 no PIX</span>
+                        <p style="font-size: 0.9rem; color: var(--text-gray);">R$ 120,00 no cartão</p>
+                    </div>
+                    <div class="product-details">
+                        <p><strong>Modelagem:</strong> Plus Size</p>
+                        <p><strong>Cores:</strong> Diversas estampas e modelos (muda automaticamente 🔄)</p>
+                        <p style="color: var(--gold); margin-top: 4px;">⚡ Desconto especial por tempo limitado!</p>
+                    </div>
+                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20a%20promo%C3%A7%C3%A3o%20do%20Vestido%20Plus%20Size%20por%20R%24%20100%20no%20PIX%20no%20site%20e%20quero%20garantir%20o%20meu!" target="_blank" class="btn-primary">Quero Aproveitar</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CATÁLOGO COMPLETO -->
+    <section id="catalogo">
+        <h2 class="section-title">Catálogo</h2>
+
+        <!-- MODA MASCULINA -->
+        <h3 class="category-title" style="margin-top: 2rem;">👕 Moda Masculina</h3>
+        
+        <h4 style="color: var(--gold); margin-bottom: 1rem; font-size: 1.2rem;">✨ Gangster Especial</h4>
+        <div class="product-grid">
+            
+            <div class="product-card glow-effect" style="border: 1px solid var(--gold);">
+                <img id="gangster-suedine-img" class="slideshow-img" src="suedine-azul.jpg" alt="Camiseta Gangster Malha Suedine" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
+                <div class="product-info">
+                    <div class="product-name" style="color: var(--gold);">Camiseta Gangster Malha Suedine</div>
+                    <div class="price-container">
+                        <span class="price">R$ 70,00 no PIX</span>
+                        <p style="font-size: 0.9rem; color: var(--text-gray);">R$ 90,00 no cartão</p>
+                    </div>
+                    <div class="product-details">
+                        <p><strong>Tecido:</strong> Malha Suedine (Toque Macio e aveludado)</p>
+                        <p><strong>Diferencial:</strong> Alta durabilidade, caimento perfeito e conforto premium</p>
+                        <p><strong>Tamanhos:</strong> P, M, G, GG</p>
+                        <p><strong>Cores:</strong> Azul Marinho, Preto, Cinza (muda automaticamente 🔄)</p>
+                    </div>
+                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Camiseta%20Gangster%20Malha%20Suedine." target="_blank" class="btn-primary">Tenho Interesse</a>
+                </div>
+            </div>
+
+            <div class="product-card glow-effect" style="border: 1px solid var(--gold);">
+                <img id="polo-gangster-img" class="slideshow-img" src="polo-azul.jpg" alt="Camisa Gangster Polo" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
+                <div class="product-info">
+                    <div class="product-name" style="color: var(--gold);">Camisa Gangster Polo</div>
+                    <div class="price-container">
+                        <span class="price">R$ 70,00 no PIX</span>
+                        <p style="font-size: 0.9rem; color: var(--text-gray);">R$ 90,00 no cartão</p>
+                    </div>
+                    <div class="product-details">
+                        <p><strong>Estilo:</strong> Polo Clássica Gangster</p>
+                        <p><strong>Acabamento:</strong> Gola estruturada e bordado exclusivo</p>
+                        <p><strong>Tamanhos:</strong> P, M, G, GG</p>
+                        <p><strong>Cores:</strong> Azul Marinho, Preto, Cinza (muda automaticamente 🔄)</p>
+                    </div>
+                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Camisa%20Gangster%20Polo." target="_blank" class="btn-primary">Tenho Interesse</a>
+                </div>
+            </div>
+
+        </div>
+
+        <h4 style="color: var(--text-gray); margin-top: 2.5rem; margin-bottom: 1rem;">Camisetas Básicas e Casuais</h4>
+        <div class="product-grid">
+            
+            <div class="product-card glow-effect">
+                <img id="basica-gangster-img" class="slideshow-img" src="basica-azul.jpg" alt="Camisa Gangster Básica" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
+                <div class="product-info">
+                    <div class="product-name">Camisa Gangster Básica</div>
+                    <div class="price-container">
+                        <span class="price">R$ 60,00 no PIX</span>
+                        <p style="font-size: 0.9rem; color: var(--text-gray);">R$ 70,00 no cartão</p>
+                    </div>
+                    <div class="product-details">
+                        <p><strong>Estilo:</strong> Básica do dia a dia</p>
+                        <p><strong>Tamanhos:</strong> P, M, G, GG</p>
+                        <p><strong>Cores:</strong> Azul Marinho, Preto, Cinza (muda automaticamente 🔄)</p>
+                    </div>
+                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Camisa%20Gangster%20B%C3%A1sica." target="_blank" class="btn-primary">Tenho Interesse</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- MODA FEMININA -->
+        <h3 class="category-title" style="margin-top: 4rem;">👗 Moda Feminina</h3>
+        
+        <div class="product-grid">
+            
+            <div class="product-card glow-effect">
+                <img id="regata-plus-img" class="slideshow-img" src="regata-plus-1.jpg" alt="Regata Plus Size" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
+                <div class="product-info">
+                    <div class="product-name">Regata Plus Size</div>
+                    <div class="price-container">
+                        <span class="price">R$ 35,00 no PIX</span>
+                        <p style="font-size: 0.9rem; color: var(--text-gray);">R$ 45,00 no cartão</p>
+                    </div>
+                    <div class="product-details">
+                        <p><strong>Modelagem:</strong> Plus Size</p>
+                        <p><strong>Cores:</strong> Diversas opções (muda automaticamente 🔄)</p>
+                    </div>
+                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Regata%20Plus%20Size." target="_blank" class="btn-primary">Tenho Interesse</a>
+                </div>
+            </div>
+
+            <div class="product-card glow-effect">
+                <img src="camiseta-plus-size.jpg" alt="Camiseta Plus Size G1" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
+                <div class="product-info">
+                    <div class="product-name">Camiseta Plus Size G1</div>
+                    <div class="price-container">
+                        <span class="price">R$ 60,00 no PIX</span>
+                        <p style="font-size: 0.9rem; color: var(--text-gray);">R$ 69,99 no cartão</p>
+                    </div>
+                    <div class="product-details">
+                        <p><strong>Tamanho:</strong> G1</p>
+                    </div>
+                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Camiseta%20Plus%20Size%20G1." target="_blank" class="btn-primary">Tenho Interesse</a>
+                </div>
+            </div>
+
+            <div class="product-card glow-effect">
+                <img id="tshirt-basica-img" class="slideshow-img" src="tshirt-basica-1.jpg" alt="T-shirt Básica" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
+                <div class="product-info">
+                    <div class="product-name">T-shirt Básica</div>
+                    <div class="price-container">
+                        <span class="price">R$ 30,00 no PIX</span>
+                        <p style="font-size: 0.9rem; color: var(--text-gray);">R$ 39,99 no cartão</p>
+                    </div>
+                    <div class="product-details">
+                        <p><strong>Tamanho:</strong> Tamanho Único</p>
+                        <p><strong>Cores:</strong> Diversas opções (muda automaticamente 🔄)</p>
+                    </div>
+                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20T-shirt%20B%C3%A1sica." target="_blank" class="btn-primary">Tenho Interesse</a>
+                </div>
+            </div>
+
+            <div class="product-card glow-effect">
+                <img src="regata-viscolycra.jpg" alt="Regata Viscolycra" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
+                <div class="product-info">
+                    <div class="product-name">Regata Viscolycra</div>
+                    <div class="price-container">
+                        <span class="price">R$ 25,00 no PIX</span>
+                        <p style="font-size: 0.9rem; color: var(--text-gray);">R$ 34,90 no cartão</p>
+                    </div>
+                    <div class="product-details">
+                        <p><strong>Tecido:</strong> Viscolycra</p>
+                    </div>
+                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Regata%20Viscolycra." target="_blank" class="btn-primary">Tenho Interesse</a>
+                </div>
+            </div>
+
+            <div class="product-card glow-effect">
+                <img id="vestido-catalogo-img" class="slideshow-img" src="vestido-plus-1.jpg" alt="Vestido Plus Size" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
+                <div class="product-info">
+                    <div class="product-name">Vestido Plus Size</div>
+                    <div class="price-container">
+                        <span class="price">R$ 110,00 no PIX</span>
+                        <p style="font-size: 0.9rem; color: var(--text-gray);">R$ 149,99 no cartão</p>
+                    </div>
+                    <div class="product-details">
+                        <p><strong>Modelagem:</strong> Plus Size</p>
+                        <p><strong>Cores:</strong> Diversas estampas e modelos (muda automaticamente 🔄)</p>
+                    </div>
+                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20Vestido%20Plus%20Size." target="_blank" class="btn-primary">Tenho Interesse</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- HORÁRIOS DE ATENDIMENTO -->
+    <section id="horarios">
+        <h2 class="section-title">⏰ Horário de Atendimento</h2>
+        <div class="hours-grid">
+            
+            <div class="hours-card glow-effect">
+                <h3>🏪 Atendimento Presencial</h3>
+                <p><strong>Quarta, Quinta e Sexta:</strong> 14:00 às 18:00</p>
+                <p style="margin-top: 0.5rem;"><strong>Sábado e Domingo:</strong> 10:00 às 18:00</p>
+            </div>
+
+            <div class="hours-card glow-effect">
+                <h3>💬 Atendimento Online (WhatsApp)</h3>
+                <p><strong>Segunda a Segunda:</strong> 12:00 às 22:00</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="sobre">
+        <h2 class="section-title">Sobre a MS Modas Fashion</h2>
+        <div class="about-content glow-effect">
+            <p>A MS Modas Fashion oferece moda feminina e masculina para quem busca qualidade, estilo e bom preço em Aparecida-SP. Estamos localizados no coração da cidade, no Box 5 da Rodoviária de Aparecida. Venha nos visitar ou faça seu pedido online!</p>
+            
+            <div class="location-info">
+                <p style="margin-bottom: 1.5rem;">📍 <strong>Rodoviária de Aparecida — Box 5, Aparecida - SP</strong></p>
+                <a href="https://maps.google.com/?q=Rodoviaria+de+Aparecida+SP" target="_blank" class="btn-secondary">Como Chegar</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2 class="section-title">Fale com a Gente</h2>
+        <div class="contact-grid">
+            
+            <div class="contact-card glow-effect">
+                <h3>📱 WhatsApp</h3>
+                <p style="margin-bottom: 1rem;">(12) 99709-6039</p>
+                <a href="https://wa.me/5512997096039" target="_blank" class="btn-primary">Chamar no WhatsApp</a>
+            </div>
+
+            <div class="contact-card glow-effect">
+                <h3>📸 Instagram</h3>
+                <p style="margin-bottom: 1rem;">@ms_modasfashion_</p>
+                <a href="https://instagram.com/ms_modasfashion_" target="_blank" class="btn-primary">Siga no Instagram</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">MS MODAS FASHION</div>
+            <div class="footer-info">Moda feminina e masculina</div>
+            <div class="footer-info">Rodoviária de Aparecida — Box 5 | Aparecida-SP</div>
+            <div class="footer-info">Instagram: @ms_modasfashion_ | WhatsApp: (12) 99709-6039</div>
+        </div>
+        <div class="footer-bottom">
+            &copy; MS Modas Fashion. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.remove('active');
+        }
+
+        function criarSlideshow(elementId, listaImagens, intervalo = 3000) {
+            const imgElemento = document.getElementById(elementId);
+            if (!imgElemento || listaImagens.length === 0) return;
+
+            let indice = 0;
+            setInterval(() => {
+                imgElemento.style.opacity = "0.3";
+                setTimeout(() => {
+                    indice = (indice + 1) % listaImagens.length;
+                    imgElemento.src = listaImagens[indice];
+                    imgElemento.style.opacity = "1";
+                }, 300);
+            }, intervalo);
+        }
+
+        // CARROSÉIS DE IMAGENS
+        criarSlideshow("combo-basica-img", ["basica-azul.jpg", "basica-preto.jpg", "basica-cinza.jpg"], 3000);
+        criarSlideshow("vestido-oferta-img", ["vestido-plus-1.jpg", "vestido-plus-2.jpg", "vestido-plus-3.jpg"], 3000);
+        criarSlideshow("gangster-suedine-img", ["suedine-azul.jpg", "suedine-preto.jpg", "suedine-cinza.jpg"], 3000);
+        criarSlideshow("polo-gangster-img", ["polo-azul.jpg", "polo-preto.jpg", "polo-cinza.jpg"], 3000);
+        criarSlideshow("basica-gangster-img", ["basica-azul.jpg", "basica-preto.jpg", "basica-cinza.jpg"], 3000);
+        criarSlideshow("regata-plus-img", ["regata-plus-1.jpg", "regata-plus-2.jpg", "regata-plus-3.jpg"], 3000);
+        criarSlideshow("tshirt-basica-img", ["tshirt-basica-1.jpg", "tshirt-basica-2.jpg", "tshirt-basica-3.jpg"], 3000);
+        criarSlideshow("vestido-catalogo-img", ["vestido-plus-1.jpg", "vestido-plus-2.jpg", "vestido-plus-3.jpg"], 3000);
+
+        // CORREÇÃO DO FADE-IN NO SCROLL
+        document.addEventListener("DOMContentLoaded", function () {
+            const elementsToAnimate = document.querySelectorAll("section, .product-card, .hours-card, .about-content, .contact-card");
+
+            if ('IntersectionObserver' in window) {
+                const observerOptions = { threshold: 0.1 };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, observerOptions);
+
+                elementsToAnimate.forEach(el => {
+                    el.classList.add("fade-in");
+                    observer.observe(el);
+                });
+            }
         });
     </script>
 </body>
