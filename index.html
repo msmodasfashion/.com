@@ -707,6 +707,23 @@
         
         <div class="product-grid">
             
+            <!-- CONJUNTO ABA ENVELOPE (NOVO) -->
+            <div class="product-card glow-effect" style="border: 1px solid var(--gold);">
+                <img id="conjunto-envelope-img" class="slideshow-img" src="conjunto-preto.jpg" alt="Conjunto Aba Envelope" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
+                <div class="product-info">
+                    <div class="product-name" style="color: var(--gold);">Conjunto Aba Envelope</div>
+                    <div class="price-container">
+                        <span class="price">Consulte o valor</span>
+                    </div>
+                    <div class="product-details">
+                        <p><strong>Estilo:</strong> Conjunto Aba Envelope</p>
+                        <p><strong>Cores:</strong> Preto e Laranja (muda automaticamente 🔄)</p>
+                    </div>
+                    <a href="tamanhos.html" class="btn-size-guide">📏 Ver Guia de Tamanhos</a>
+                    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20Conjunto%20Aba%20Envelope." target="_blank" class="btn-primary">Tenho Interesse</a>
+                </div>
+            </div>
+
             <!-- VESTIDO TAMANHO ÚNICO COM TROCA AUTOMÁTICA DE CORES -->
             <div class="product-card glow-effect" style="border: 1px solid var(--gold);">
                 <img id="vestido-novo-auto-img" class="slideshow-img" src="vestido-verde.jpg" alt="Vestido Tamanho Único" style="width: 100%; height: 280px; object-fit: cover; border-radius: 8px 8px 0 0;">
@@ -912,12 +929,16 @@
             }, intervalo);
         }
 
-        // CARROSÉIS DE IMAGENS (INCLUINDO O NOVO VESTIDO AUTOMÁTICO)
+        // CARROSÉIS DE IMAGENS
         criarSlideshow("combo-basica-img", ["basica-azul.jpg", "basica-preto.jpg", "basica-cinza.jpg"], 3000);
         criarSlideshow("vestido-oferta-img", ["vestido-plus-1.jpg", "vestido-plus-2.jpg", "vestido-plus-3.jpg"], 3000);
         criarSlideshow("gangster-suedine-img", ["suedine-azul.jpg", "suedine-preto.jpg", "suedine-cinza.jpg"], 3000);
         criarSlideshow("polo-gangster-img", ["polo-azul.jpg", "polo-preto.jpg", "polo-cinza.jpg"], 3000);
         criarSlideshow("basica-gangster-img", ["basica-azul.jpg", "basica-preto.jpg", "basica-cinza.jpg"], 3000);
+        
+        // CARROSSEL DO CONJUNTO ABA ENVELOPE (PRETO E LARANJA)
+        criarSlideshow("conjunto-envelope-img", ["conjunto-preto.jpg", "conjunto-laranja.jpg"], 3000);
+
         criarSlideshow("vestido-novo-auto-img", ["vestido-verde.jpg", "vestido-preto.jpg"], 3000);
         criarSlideshow("regata-plus-img", ["regata-plus-1.jpg", "regata-plus-2.jpg", "regata-plus-3.jpg"], 3000);
         criarSlideshow("tshirt-basica-img", ["tshirt-basica-1.jpg", "tshirt-basica-2.jpg", "tshirt-basica-3.jpg"], 3000);
