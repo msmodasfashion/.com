@@ -16,4 +16,3 @@ collections:
       - {label: "Preço PIX", name: "preco_pix", widget: "string"}
       - {label: "Preço Cartão", name: "preco_cartao", widget: "string"}
       - {label: "Foto", name: "image", widget: "image"}
-
