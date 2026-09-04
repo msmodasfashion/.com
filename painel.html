@@ -7,7 +7,38 @@
   <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
+  <!-- Linha que força o CMS a ler o config dentro da pasta admin -->
+  <script>
+    window.CMS_MANUAL_INIT = true;
+  </script>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    CMS.init({
+      config: {
+        backend: {
+          name: 'github',
+          repo: 'msmodasfashion/ms-modas-fashion',
+          branch: 'main'
+        },
+        media_folder: 'img',
+        public_folder: '/img',
+        collections: [
+          {
+            name: 'produtos',
+            label: 'Produtos',
+            folder: 'conteudo/produtos',
+            create: true,
+            fields: [
+              {label: 'Nome do Produto', name: 'title', widget: 'string'},
+              {label: 'Preço PIX', name: 'preco_pix', widget: 'string'},
+              {label: 'Preço Cartão', name: 'preco_cartao', widget: 'string'},
+              {label: 'Foto', name: 'image', widget: 'image'}
+            ]
+          }
+        ]
+      }
+    });
+  </script>
   <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {
