@@ -18,6 +18,8 @@
             --text-light: #f5f5f5;
             --text-gray: #a0a0a0;
             --border-gold: rgba(212, 175, 55, 0.3);
+            --whatsapp-green: #25D366;
+            --whatsapp-hover: #1da851;
         }
 
         * {
@@ -34,7 +36,7 @@
             line-height: 1.6;
         }
 
-        /* ANIMAÇÃO DE FADE NO SCROLL (APLICADA DINAMICAMENTE) */
+        /* ANIMAÇÃO DE FADE NO SCROLL */
         .fade-in {
             opacity: 0;
             transform: translateY(25px);
@@ -46,7 +48,7 @@
             transform: translateY(0);
         }
 
-        /* EFEITO GLOW PULSANTE EM DESTAQUE */
+        /* EFEITO GLOW PULSANTE */
         .glow-effect {
             animation: goldGlow 2.5s infinite alternate ease-in-out;
         }
@@ -60,7 +62,6 @@
             }
         }
 
-        /* EFEITO DE TRANSIÇÃO SUAVE PARA AS IMAGENS DO SLIDESHOW */
         .slideshow-img {
             transition: opacity 0.5s ease-in-out;
         }
@@ -97,7 +98,7 @@
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
             list-style: none;
             align-items: center;
         }
@@ -105,7 +106,7 @@
         .nav-links a {
             color: var(--text-light);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: color 0.3s;
@@ -129,7 +130,6 @@
             box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
         }
 
-        /* MENU MOBILE COM EFEITO FADE & SLIDE */
         .mobile-toggle {
             display: none;
             background: none;
@@ -317,6 +317,56 @@
             margin-bottom: 0.2rem;
         }
 
+        .btn-size-guide {
+            display: inline-block;
+            color: var(--gold);
+            font-size: 0.8rem;
+            text-decoration: underline;
+            margin-top: 0.4rem;
+            cursor: pointer;
+        }
+
+        /* TABELAS DA GUIA DE TAMANHOS */
+        .size-guide-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .size-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .size-card h3 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .size-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        .size-table th, .size-table td {
+            padding: 0.6rem;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .size-table th {
+            color: var(--gold);
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+
+        .size-table tr:hover {
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+
         /* SOBRE, HORÁRIOS E LOCALIZAÇÃO */
         .about-content {
             background-color: var(--bg-card);
@@ -373,6 +423,52 @@
             margin-bottom: 1rem;
         }
 
+        /* BOTÃO FLUTUANTE DO WHATSAPP (VERDE OFICIAL) */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--whatsapp-green);
+            color: #fff;
+            border-radius: 50px;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.5);
+            z-index: 2000;
+            transition: all 0.3s ease;
+            animation: pulseWhatsapp 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            background-color: var(--whatsapp-hover);
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.7);
+            color: #fff;
+        }
+
+        .whatsapp-icon {
+            width: 24px;
+            height: 24px;
+            fill: #fff;
+        }
+
+        @keyframes pulseWhatsapp {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
         /* FOOTER */
         footer {
             background-color: #000;
@@ -409,7 +505,7 @@
             color: var(--text-gray);
         }
 
-        /* RESPONSIVIDADE & ANIMAÇÃO DE FADE NO MENU MOBILE */
+        /* RESPONSIVIDADE */
         @media (max-width: 768px) {
             .mobile-toggle {
                 display: block;
@@ -446,6 +542,15 @@
             .hero h2 {
                 font-size: 1rem;
             }
+
+            .whatsapp-text {
+                display: none;
+            }
+
+            .whatsapp-float {
+                padding: 14px;
+                border-radius: 50%;
+            }
         }
     </style>
 </head>
@@ -459,6 +564,7 @@
                 <li><a href="#inicio" onclick="closeMenu()">Início</a></li>
                 <li><a href="#ofertas" onclick="closeMenu()">Ofertas</a></li>
                 <li><a href="#catalogo" onclick="closeMenu()">Catálogo</a></li>
+                <li><a href="#medidas" onclick="closeMenu()">Tamanhos</a></li>
                 <li><a href="#horarios" onclick="closeMenu()">Horários</a></li>
                 <li><a href="#sobre" onclick="closeMenu()">Sobre Nós</a></li>
                 <li><a href="#contato" onclick="closeMenu()">Contato</a></li>
@@ -493,6 +599,7 @@
                     <div class="product-details">
                         <p><strong>Tamanhos:</strong> P, M, G, GG</p>
                         <p><strong>Cores:</strong> Escolha suas preferidas (muda automaticamente 🔄)</p>
+                        <a href="#medidas" class="btn-size-guide">📏 Ver Guia de Tamanhos</a>
                     </div>
                     <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Quero%20aproveitar%20a%20promo%C3%A7%C3%A3o%20de%202%20B%C3%A1sicas%20por%20100" target="_blank" class="btn-primary">Quero Aproveitar</a>
                 </div>
@@ -511,6 +618,7 @@
                         <p><strong>Modelagem:</strong> Plus Size</p>
                         <p><strong>Cores:</strong> Diversas estampas e modelos (muda automaticamente 🔄)</p>
                         <p style="color: var(--gold); margin-top: 4px;">⚡ Desconto especial por tempo limitado!</p>
+                        <a href="#medidas" class="btn-size-guide">📏 Ver Guia de Tamanhos</a>
                     </div>
                     <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20a%20promo%C3%A7%C3%A3o%20do%20Vestido%20Plus%20Size%20por%20R%24%20100%20no%20PIX%20no%20site%20e%20quero%20garantir%20o%20meu!" target="_blank" class="btn-primary">Quero Aproveitar</a>
                 </div>
@@ -541,7 +649,7 @@
                         <p><strong>Tecido:</strong> Malha Suedine (Toque Macio e aveludado)</p>
                         <p><strong>Diferencial:</strong> Alta durabilidade, caimento perfeito e conforto premium</p>
                         <p><strong>Tamanhos:</strong> P, M, G, GG</p>
-                        <p><strong>Cores:</strong> Azul Marinho, Preto, Cinza (muda automaticamente 🔄)</p>
+                        <a href="#medidas" class="btn-size-guide">📏 Ver Guia de Tamanhos</a>
                     </div>
                     <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Camiseta%20Gangster%20Malha%20Suedine." target="_blank" class="btn-primary">Tenho Interesse</a>
                 </div>
@@ -559,7 +667,7 @@
                         <p><strong>Estilo:</strong> Polo Clássica Gangster</p>
                         <p><strong>Acabamento:</strong> Gola estruturada e bordado exclusivo</p>
                         <p><strong>Tamanhos:</strong> P, M, G, GG</p>
-                        <p><strong>Cores:</strong> Azul Marinho, Preto, Cinza (muda automaticamente 🔄)</p>
+                        <a href="#medidas" class="btn-size-guide">📏 Ver Guia de Tamanhos</a>
                     </div>
                     <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Camisa%20Gangster%20Polo." target="_blank" class="btn-primary">Tenho Interesse</a>
                 </div>
@@ -581,7 +689,7 @@
                     <div class="product-details">
                         <p><strong>Estilo:</strong> Básica do dia a dia</p>
                         <p><strong>Tamanhos:</strong> P, M, G, GG</p>
-                        <p><strong>Cores:</strong> Azul Marinho, Preto, Cinza (muda automaticamente 🔄)</p>
+                        <a href="#medidas" class="btn-size-guide">📏 Ver Guia de Tamanhos</a>
                     </div>
                     <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Camisa%20Gangster%20B%C3%A1sica." target="_blank" class="btn-primary">Tenho Interesse</a>
                 </div>
@@ -605,6 +713,7 @@
                     <div class="product-details">
                         <p><strong>Tamanho:</strong> Tamanho Único</p>
                         <p><strong>Cores:</strong> Diversas opções (muda automaticamente 🔄)</p>
+                        <a href="#medidas" class="btn-size-guide">📏 Ver Guia de Tamanhos</a>
                     </div>
                     <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Regata%20Viscolycra." target="_blank" class="btn-primary">Tenho Interesse</a>
                 </div>
@@ -620,6 +729,7 @@
                     </div>
                     <div class="product-details">
                         <p><strong>Tamanho:</strong> G1</p>
+                        <a href="#medidas" class="btn-size-guide">📏 Ver Guia de Tamanhos</a>
                     </div>
                     <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Camiseta%20Plus%20Size%20G1." target="_blank" class="btn-primary">Tenho Interesse</a>
                 </div>
@@ -636,6 +746,7 @@
                     <div class="product-details">
                         <p><strong>Tamanho:</strong> Tamanho Único</p>
                         <p><strong>Cores:</strong> Diversas opções (muda automaticamente 🔄)</p>
+                        <a href="#medidas" class="btn-size-guide">📏 Ver Guia de Tamanhos</a>
                     </div>
                     <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20T-shirt%20B%C3%A1sica." target="_blank" class="btn-primary">Tenho Interesse</a>
                 </div>
@@ -652,9 +763,85 @@
                     <div class="product-details">
                         <p><strong>Modelagem:</strong> Plus Size</p>
                         <p><strong>Cores:</strong> Diversas estampas e modelos (muda automaticamente 🔄)</p>
+                        <a href="#medidas" class="btn-size-guide">📏 Ver Guia de Tamanhos</a>
                     </div>
                     <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20Vestido%20Plus%20Size." target="_blank" class="btn-primary">Tenho Interesse</a>
                 </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- GUIA DE TAMANHOS -->
+    <section id="medidas">
+        <h2 class="section-title">📏 Guia de Tamanhos</h2>
+        <div class="size-guide-container">
+            
+            <!-- TABELA MASCULINA -->
+            <div class="size-card glow-effect">
+                <h3>👕 Moda Masculina (Camisas & Polos)</h3>
+                <table class="size-table">
+                    <thead>
+                        <tr>
+                            <th>Tamanho</th>
+                            <th>Tórax (cm)</th>
+                            <th>Comprimento (cm)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>P</strong></td>
+                            <td>92 - 96 cm</td>
+                            <td>68 cm</td>
+                        </tr>
+                        <tr>
+                            <td><strong>M</strong></td>
+                            <td>98 - 102 cm</td>
+                            <td>70 cm</td>
+                        </tr>
+                        <tr>
+                            <td><strong>G</strong></td>
+                            <td>104 - 108 cm</td>
+                            <td>72 cm</td>
+                        </tr>
+                        <tr>
+                            <td><strong>GG</strong></td>
+                            <td>110 - 114 cm</td>
+                            <td>74 cm</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- TABELA FEMININA -->
+            <div class="size-card glow-effect">
+                <h3>👗 Moda Feminina</h3>
+                <table class="size-table">
+                    <thead>
+                        <tr>
+                            <th>Categoria</th>
+                            <th>Veste Manequim</th>
+                            <th>Observação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Tamanho Único</strong></td>
+                            <td>36 ao 42</td>
+                            <td>Tecido com alta elasticidade e ajuste ao corpo</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Plus Size (G1)</strong></td>
+                            <td>46 ao 50</td>
+                            <td>Modelagem confortável e soltinha</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vestidos Plus</strong></td>
+                            <td>46 ao 52</td>
+                            <td>Caimento fluido e tecido leve</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
         </div>
@@ -710,6 +897,14 @@
         </div>
     </section>
 
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+    <a href="https://wa.me/5512997096039?text=Ol%C3%A1!%20Estou%20no%20site%20da%20MS%20Modas%20Fashion%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida." target="_blank" class="whatsapp-float" aria-label="Falar no WhatsApp">
+        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+            <path d="M12.031 2c-5.517 0-9.993 4.476-9.993 9.993 0 1.763.459 3.484 1.33 5.003l-1.416 5.174 5.293-1.388c1.472.803 3.134 1.226 4.786 1.226 5.517 0 9.993-4.476 9.993-9.993s-4.476-9.993-9.993-9.993zm0 18.286c-1.503 0-2.977-.402-4.264-1.164l-.306-.181-3.17.831.846-3.088-.199-.317c-.838-1.336-1.282-2.883-1.282-4.475 0-4.567 3.716-8.283 8.283-8.283s8.283 3.716 8.283 8.283-3.716 8.283-8.283 8.283zm4.544-6.208c-.249-.125-1.472-.726-1.701-.809-.228-.083-.394-.125-.56.125-.166.249-.643.809-.788.975-.145.166-.291.187-.54.062s-1.05-.387-1.999-1.234c-.738-.659-1.237-1.473-1.382-1.722-.145-.249-.015-.384.11-.508.112-.112.249-.291.374-.436.125-.145.166-.249.249-.415.083-.166.042-.311-.021-.436s-.56-1.35-.768-1.849c-.203-.487-.411-.421-.56-.428-.141-.007-.302-.007-.463-.007s-.425.061-.648.303c-.223.242-.85.831-.85 2.028s.871 2.353.993 2.518c.122.166 1.715 2.619 4.155 3.673.58.251 1.033.401 1.386.513.583.185 1.114.159 1.534.096.468-.07 1.472-.602 1.679-1.183.208-.581.208-1.079.145-1.183-.062-.104-.228-.187-.477-.312z"/>
+        </svg>
+        <span class="whatsapp-text">Dúvidas? Fale Conosco</span>
+    </a>
+
     <footer>
         <div class="footer-content">
             <div class="footer-logo">MS MODAS FASHION</div>
@@ -760,7 +955,7 @@
 
         // CORREÇÃO DO FADE-IN NO SCROLL
         document.addEventListener("DOMContentLoaded", function () {
-            const elementsToAnimate = document.querySelectorAll("section, .product-card, .hours-card, .about-content, .contact-card");
+            const elementsToAnimate = document.querySelectorAll("section, .product-card, .hours-card, .about-content, .contact-card, .size-card");
 
             if ('IntersectionObserver' in window) {
                 const observerOptions = { threshold: 0.1 };
@@ -783,3 +978,4 @@
     </script>
 </body>
 </html>
+
